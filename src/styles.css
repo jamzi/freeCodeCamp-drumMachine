@@ -1,0 +1,81 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Passion One", cursive;
+  background: #212121;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#drum-machine {
+  display: flex;
+  padding: 20px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  width: 500px;
+  margin: auto;
+}
+
+#pad-elements {
+  display: grid;
+  grid-template-columns: 60px 60px 60px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+
+.drum-pad {
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 20px;
+  background: radial-gradient(#e66465, #9198e5);
+}
+
+.drum-pad.active {
+  border: 3px solid #e66465;
+}
+
+#pad-additional-controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+#pad-additional-controls p {
+  color: #fff;
+}
+
+#display {
+  font-size: 30px;
+  color: #c92c41;
+  padding: 20px;
+  background: #000;
+  min-width: 175px;
+  text-align: center;
+}
+
+@media (max-width: 786px) {
+  #drum-machine {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  #pad-additional-controls {
+    padding: 20px 0px;
+  }
+}
